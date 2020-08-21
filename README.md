@@ -4,7 +4,7 @@
 ## Instructions:
 docker-compose up
 
-## Comepleted Challenges:
+## Completed Challenges:
 
 Thus far the user is able to:
 
