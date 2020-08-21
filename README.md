@@ -1,5 +1,9 @@
 # Wedding List
 
+
+## Instructions:
+docker-compose up
+
 ## Comepleted Challenges:
 
 Thus far the user is able to:
