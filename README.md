@@ -24,5 +24,5 @@ Thus far the user is able to:
 - Email Notification Upon Gift Purchase
 - Logging 
 ## To Do
-- Complete React frontend 
+- Complete React frontend (chose not to upload an incomplete version)
 - Multiple gift lists/users
