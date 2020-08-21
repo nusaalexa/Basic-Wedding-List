@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <style href="{{ STATIC_URL }}pdf.css" rel="stylesheet"></style>
+    <title> Gift list report</title>
+</head>
+<body><h1>{{ giftlist.list_name }}</h1>
+by {{ giftlist.user }}<br>
+
+
+<h3>Purchased gifts</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Brand</th>
+        <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for gift in purchasedgifts %}
+        <tr class="row{% cycle "1" "2" %}">
+            <td>{{ gift.name }}</td>
+            <td class="num">${{ gift.price }}</td>
+            <td>{{ gift.brand }}</td>
+        </tr>
+    {% endfor %}
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>£{{ purchased_total }}</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Unpurchased gifts</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Brand</th>
+        <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for gift in unpurchasedgifts %}
+        <tr class="row{% cycle "1" "2" %}">
+            <td>{{ gift.name }}</td>
+            <td class="num">${{ gift.price }}</td>
+            <td>{{ gift.brand }}</td>
+        </tr>
+    {% endfor %}
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>£{{ unpurchased_total }}</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

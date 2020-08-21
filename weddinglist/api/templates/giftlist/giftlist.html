@@ -1,0 +1,10 @@
+<html>
+<body>
+<h1>Gift List {{ giftlist.list_name }}</h1>
+<ul>
+    {% for gift in giftlist %}
+        <li>{{ gift.name }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>

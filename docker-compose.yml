@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: bash -c "python weddinglist/manage.py makemigrations && python weddinglist/manage.py migrate && python weddinglist/manage.py runserver 0.0.0.0:8000"
+    volumes:
+    - .:/weddinglist
+    ports:
+    - "8000:8000"
